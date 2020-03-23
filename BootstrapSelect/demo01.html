@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="../public/bootstrap-3.4.1-dist/css/bootstrap-theme.css" >
+  <link rel="stylesheet" href="../public/bootstrap-3.4.1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/bootstrap-select.min.css">
+
+  <script src="../public/jquery-3.4.1.js"></script>
+  <script src="../public/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+  <!-- <script src="../public/jquery-1.8.3.js"></script> -->
+  <script src="./js/bootstrap-select.min.js"></script>
+
+  <style>
+    .box {
+      margin: 40px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .section {
+      margin: 20px;
+    }
+
+    .special {
+      font-weight: bold !important;
+      color: #fff !important;
+      background: #bc0000 !important;
+      text-transform: uppercase;
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="box">
+    <div class="section">
+      <h3>基本应用</h3>
+      <select class="selectpicker">
+        <option>Mustard</option>
+        <option>Ketchup</option>
+        <option>Barbecue</option>
+      </select>
+    </div>
+
+    <div class="section">
+      <h3>选项分组</h3>
+      <select class="selectpicker">
+        <optgroup label="前端">
+          <option>张三</option>
+          <option>李四</option>
+          <option>王五</option>
+        </optgroup>
+        <optgroup label="后端">
+          <option>孙悟空</option>
+          <option>猪悟能</option>
+          <option>沙悟净</option>
+        </optgroup>
+      </select>
+    </div>
+    <div class="section">
+      <h3>多选框</h3>
+      <select class="selectpicker" multiple>
+        <option>张三</option>
+        <option>李四</option>
+        <option>王五</option>
+        <option>孙悟空</option>
+        <option>猪悟能</option>
+        <option>沙悟净</option>
+      </select>
+    </div>
+    
+    <div class="section">
+      <h3>可搜索筛选</h3>
+      <select class="selectpicker" data-live-search="true">
+        <option>张三</option>
+        <option>李四</option>
+        <option>王五</option>
+        <option>孙悟空</option>
+        <option>猪悟能</option>
+        <option>沙悟净</option>
+      </select>
+    </div>
+
+    <div class="section">
+      <h3>可搜索筛选data-tokens自定义搜索条件</h3>
+      <select class="selectpicker" data-live-search="true">
+        <option>张三</option>
+        <option>李四</option>
+        <option>王五</option>
+        <option data-tokens="西游记">孙悟空</option>
+        <option data-tokens="西游记">猪悟能</option>
+        <option data-tokens="西游记">沙悟净</option>
+      </select>
+    </div>
+
+    
+    <div class="section">
+      <h3>定义多选个数</h3>
+      <select class="selectpickerText" multiple data-max-options="3">
+        <option>张三</option>
+        <option>李四</option>
+        <option>王五</option>
+        <option data-tokens="西游记">孙悟空</option>
+        <option data-tokens="西游记">猪悟能</option>
+        <option data-tokens="西游记">沙悟净</option>
+      </select>
+    </div>
+
+    <div class="section">
+      <h3>每组只能选2个</h3>
+      <select class="selectpickerOne" multiple>
+        <optgroup label="前端" data-max-options="2">
+          <option>张三</option>
+          <option>李四</option>
+          <option>王五</option>
+        </optgroup>
+        <optgroup label="后端" data-max-options="2">
+          <option>孙悟空</option>
+          <option>猪悟能</option>
+          <option>沙悟净</option>
+        </optgroup>
+      </select>
+    </div>
+
+    <div class="section">
+      <h3>select title属性，占位符</h3>
+      <select class="selectpickerOne" title="请选择姓名">
+        <option>张三</option>
+        <option>李四</option>
+        <option>王五</option>
+        <option>孙悟空</option>
+        <option>猪悟能</option>
+        <option>沙悟净</option>
+      </select>
+    </div>
+
+    <div class="section">
+      <h3>option title属性，代替显示文字</h3>
+      <select class="selectpickerOne" title="请选择姓名">
+        <option title="san zhang">张三</option>
+        <option title="si li">李四</option>
+        <option title="wu wang">王五</option>
+        <option title="wukong sun">孙悟空</option>
+        <option title="wuneng zhu">猪悟能</option>
+        <option title="wujing sha">沙悟净</option>
+      </select>
+    </div>
+
+    <div class="section">
+      <h3>option title属性，代替显示文字</h3>
+      <select class="selectpickerTwo" multiple title="请选择姓名" data-selected-text-format="count > 0">
+        <option title="san zhang">张三</option>
+        <option title="si li">李四</option>
+        <option title="wu wang">王五</option>
+        <option title="wukong sun">孙悟空</option>
+        <option title="wuneng zhu">猪悟能</option>
+        <option title="wujing sha">沙悟净</option>
+      </select>
+    </div>
+    
+    <div class="section">
+      <h3>按钮类型（样式）</h3>
+      <select class="selectpicker" data-style="btn-info">
+        <option title="san zhang">张三</option>
+        <option title="si li">李四</option>
+        <option title="wu wang">王五</option>
+        <option title="wukong sun">孙悟空</option>
+        <option title="wuneng zhu">猪悟能</option>
+        <option title="wujing sha">沙悟净</option>
+      </select>
+      <select class="selectpicker" data-style="btn-primary">
+        <option title="san zhang">张三</option>
+        <option title="si li">李四</option>
+        <option title="wu wang">王五</option>
+        <option title="wukong sun">孙悟空</option>
+        <option title="wuneng zhu">猪悟能</option>
+        <option title="wujing sha">沙悟净</option>
+      </select>
+      <select class="selectpicker" data-style="btn-success">
+        <option title="san zhang">张三</option>
+        <option title="si li">李四</option>
+        <option title="wu wang">王五</option>
+        <option title="wukong sun">孙悟空</option>
+        <option title="wuneng zhu">猪悟能</option>
+        <option title="wujing sha">沙悟净</option>
+      </select>
+      <select class="selectpicker" data-style="btn-warning">
+        <option title="san zhang">张三</option>
+        <option title="si li">李四</option>
+        <option title="wu wang">王五</option>
+        <option title="wukong sun">孙悟空</option>
+        <option title="wuneng zhu">猪悟能</option>
+        <option title="wujing sha">沙悟净</option>
+      </select>
+      <select class="selectpicker" data-style="btn-danger">
+        <option title="san zhang">张三</option>
+        <option title="si li">李四</option>
+        <option title="wu wang">王五</option>
+        <option title="wukong sun">孙悟空</option>
+        <option title="wuneng zhu">猪悟能</option>
+        <option title="wujing sha">沙悟净</option>
+      </select>
+    </div>
+
+    <div class="section">
+      <h3>显示勾选标记</h3>
+      <select class="selectpickerOne show-tick" title="请选择姓名">
+        <option>张三</option>
+        <option>李四</option>
+        <option>王五</option>
+        <option>孙悟空</option>
+        <option>猪悟能</option>
+        <option>沙悟净</option>
+      </select>
+    </div>
+
+    <div class="section">
+      <h3>自定义option样式</h3>
+      <select class="selectpickerOne show-tick" title="请选择姓名">
+        <option>张三</option>
+        <option class="special">李四</option>
+        <option>王五</option>
+        <option style="background: #5cb85c; color: #fff;">孙悟空</option>
+        <option>猪悟能</option>
+        <option>沙悟净</option>
+      </select>
+    </div>
+
+    <div class="section">
+      <h3>设置宽度</h3>
+      <select class="selectpickerOne show-tick" title="未设置data-width属性">
+        <option>张三</option>
+        <option>李四</option>
+        <option>王五</option>
+        <option>孙悟空</option>
+        <option>猪悟能</option>
+        <option>沙悟净</option>
+      </select>
+      <select class="selectpickerOne show-tick" title="auto" data-width="auto">
+        <option>张三</option>
+        <option>李四</option>
+        <option>王五</option>
+        <option>孙悟空</option>
+        <option>猪悟能</option>
+        <option>沙悟净</option>
+      </select>
+      <select class="selectpickerOne show-tick" title="fit" data-width="fit">
+        <option>张三</option>
+        <option>李四</option>
+        <option>王五</option>
+        <option>耶斯托洛夫斯基</option>
+        <option>孙悟空</option>
+        <option>猪悟能</option>
+        <option>沙悟净</option>
+      </select>
+      <select class="selectpickerOne show-tick" title="200px" data-width="200px">
+        <option>张三</option>
+        <option>李四</option>
+        <option>王五</option>
+        <option>孙悟空</option>
+        <option>猪悟能</option>
+        <option>沙悟净</option>
+      </select>
+      <select class="selectpickerOne show-tick" title="40%" data-width="40%">
+        <option>张三</option>
+        <option>李四</option>
+        <option>王五</option>
+        <option>孙悟空</option>
+        <option>猪悟能</option>
+        <option>沙悟净</option>
+      </select>
+    </div>
+
+    <div class="section">
+      <h3>自定义选项 <span>Glyphicons不包含在Bootstrap 4中</span> </h3>
+      <select class="selectpickerOne show-tick" title="自定义icon,data-icon">
+        <option data-icon="glyphicon glyphicon-music">张三</option>
+        <option data-icon="glyphicon glyphicon-glass">李四</option>
+        <option data-icon="glyphicon glyphicon-star">王五</option>
+        <option data-icon="glyphicon glyphicon-heart">孙悟空</option>
+        <option data-icon="glyphicon glyphicon-signal">猪悟能</option>
+        <option data-icon="glyphicon glyphicon-home">沙悟净</option>
+      </select>
+      <select class="selectpickerOne show-tick" title="自定义内容">
+        <option data-content="<span class='label label-success'>张三</span>">张三</option>
+        <option data-content="<span class='label label-primary'>孙悟空</span>">孙悟空</option>
+        <option data-content="<span class='label label-danger'>猪悟能</span>">猪悟能</option>
+        <option data-content="<span class='label label-info'>沙悟净</span>">沙悟净</option>
+      </select>
+      <select class="selectpickerOne show-tick" title="自定义子文本">
+        <option data-subtext="一脸麻子" >张三</option>
+        <option data-subtext="肤白貌美大长腿" >李四</option>
+        <option data-subtext="这是一个歪果仁" >耶斯托洛夫斯基</option>
+        <option data-subtext="唐曾大徒弟" >孙悟空</option>
+        <option data-subtext="高老庄的女婿" >猪悟能</option>
+      </select>
+      <select class="selectpickerThree show-tick" title="自定义子文本" showSubtext="true">
+        <option data-subtext="一脸麻子" >张三</option>
+        <option data-subtext="肤白貌美大长腿" >李四</option>
+        <option data-subtext="这是一个歪果仁" >耶斯托洛夫斯基</option>
+        <option data-subtext="唐曾大徒弟" >孙悟空</option>
+        <option data-subtext="高老庄的女婿" >猪悟能</option>
+      </select>
+    </div>
+
+    <div class="section">
+      <h3>自定义菜单</h3>
+      <select class="selectpickerOne show-tick" title="size=auto">
+        <option data-icon="glyphicon glyphicon-music">张三</option>
+        <option data-icon="glyphicon glyphicon-glass">李四</option>
+        <option data-icon="glyphicon glyphicon-star">王五</option>
+        <option data-icon="glyphicon glyphicon-heart">孙悟空</option>
+        <option data-icon="glyphicon glyphicon-signal">猪悟能</option>
+        <option data-icon="glyphicon glyphicon-home">沙悟净</option>
+      </select>
+      <select class="selectpickerOne show-tick" title="size=false" size="false">
+        <option data-content="<span class='label label-success'>张三</span>">张三</option>
+        <option data-content="<span class='label label-primary'>孙悟空</span>">孙悟空</option>
+        <option data-content="<span class='label label-danger'>猪悟能</span>">猪悟能</option>
+        <option data-content="<span class='label label-info'>沙悟净</span>">沙悟净</option>
+        <option data-subtext="一脸麻子" >张三</option>
+        <option data-subtext="肤白貌美大长腿" >李四</option>
+        <option data-subtext="这是一个歪果仁" >耶斯托洛夫斯基</option>
+        <option data-subtext="唐曾大徒弟" >孙悟空</option>
+        <option data-subtext="高老庄的女婿" >猪悟能</option>
+        <option data-subtext="一脸麻子" >张三</option>
+        <option data-subtext="肤白貌美大长腿" >李四</option>
+        <option data-subtext="这是一个歪果仁" >耶斯托洛夫斯基</option>
+        <option data-subtext="唐曾大徒弟" >孙悟空</option>
+        <option data-subtext="高老庄的女婿" >猪悟能</option>
+      </select>
+      <select class="selectpickerOne show-tick" title="data-size=5" data-size="5">
+        <option data-content="<span class='label label-success'>张三</span>">张三</option>
+        <option data-content="<span class='label label-primary'>孙悟空</span>">孙悟空</option>
+        <option data-content="<span class='label label-danger'>猪悟能</span>">猪悟能</option>
+        <option data-content="<span class='label label-info'>沙悟净</span>">沙悟净</option>
+        <option data-subtext="一脸麻子" >张三</option>
+        <option data-subtext="肤白貌美大长腿" >李四</option>
+        <option data-subtext="这是一个歪果仁" >耶斯托洛夫斯基</option>
+        <option data-subtext="唐曾大徒弟" >孙悟空</option>
+        <option data-subtext="高老庄的女婿" >猪悟能</option>
+        <option data-subtext="一脸麻子" >张三</option>
+        <option data-subtext="肤白貌美大长腿" >李四</option>
+        <option data-subtext="这是一个歪果仁" >耶斯托洛夫斯基</option>
+        <option data-subtext="唐曾大徒弟" >孙悟空</option>
+        <option data-subtext="高老庄的女婿" >猪悟能</option>
+      </select>
+      <select class="selectpickerOne show-tick" title="选择、取消所有选项" data-size="5" multiple data-actions-box="true">
+        <option data-content="<span class='label label-success'>张三</span>">张三</option>
+        <option data-content="<span class='label label-primary'>孙悟空</span>">孙悟空</option>
+        <option data-subtext="设置data-actions-box属性为true" >耶斯托洛夫斯基</option>
+        <option data-subtext="唐曾大徒弟" >孙悟空</option>
+        <option data-subtext="高老庄的女婿" >data-divider分割线</option>
+        <option data-divider="true"></option>
+        <option data-subtext="肤白貌美大长腿" >李四</option>
+        <option data-subtext="这是一个歪果仁" >耶斯托洛夫斯基</option>
+        <option data-subtext="唐曾大徒弟" >孙悟空</option>
+        <option data-subtext="高老庄的女婿" >猪悟能</option>
+      </select>
+      <select class="selectpickerOne show-tick" title="data-header添加标题" data-size="5" multiple data-actions-box="true" data-header="添加标题">
+        <option data-content="<span class='label label-primary'>孙悟空</span>">孙悟空</option>
+        <option data-subtext="设置data-actions-box属性为true" >耶斯托洛夫斯基</option>
+        <option data-subtext="唐曾大徒弟" >孙悟空</option>
+        <option data-subtext="高老庄的女婿" >data-divider分割线</option>
+        <option data-divider="true"></option>
+        <option data-subtext="肤白貌美大长腿" >李四</option>
+        <option data-subtext="这是一个歪果仁" >耶斯托洛夫斯基</option>
+        <option data-subtext="唐曾大徒弟" >孙悟空</option>
+        <option data-subtext="高老庄的女婿" >猪悟能</option>
+      </select>
+      <select class="selectpickerOne show-tick" title="container容器" data-container="body">
+        <option data-content="<span class='label label-primary'>孙悟空</span>">孙悟空</option>
+        <option data-subtext="设置data-actions-box属性为true" >耶斯托洛夫斯基</option>
+        <option data-subtext="唐曾大徒弟" >孙悟空</option>
+        <option data-subtext="高老庄的女婿" >data-divider分割线</option>
+        <option data-divider="true"></option>
+        <option data-subtext="肤白貌美大长腿" >李四</option>
+        <option data-subtext="这是一个歪果仁" >耶斯托洛夫斯基</option>
+        <option data-subtext="唐曾大徒弟" >孙悟空</option>
+        <option data-subtext="高老庄的女婿" >猪悟能</option>
+      </select>
+      <select class="selectpickerOne show-tick dropup " title="向上的菜单" data-dropup-auto="false" >
+        <option data-content="<span class='label label-primary'>孙悟空</span>">孙悟空</option>
+        <option data-subtext="设置data-actions-box属性为true" >耶斯托洛夫斯基</option>
+        <option data-subtext="唐曾大徒弟" >孙悟空</option>
+        <option data-subtext="高老庄的女婿" >data-divider分割线</option>
+        <option data-divider="true"></option>
+        <option data-subtext="肤白貌美大长腿" >李四</option>
+        <option data-subtext="这是一个歪果仁" >耶斯托洛夫斯基</option>
+        <option data-subtext="唐曾大徒弟" >孙悟空</option>
+        <option data-subtext="高老庄的女婿" >猪悟能</option>
+      </select>
+    </div>
+
+    <div class="section">
+      <h3>Disabled</h3>
+      
+      <select class="selectpickerOne show-tick " title="不可点击" disabled>
+        <option data-content="<span class='label label-primary'>孙悟空</span>">孙悟空</option>
+        <option data-subtext="高老庄的女婿" >data-divider分割线</option>
+        <option data-divider="true"></option>
+        <option data-subtext="这是一个歪果仁" >耶斯托洛夫斯基</option>
+      </select>
+      <select class="selectpicker" multiple>
+        <optgroup label="本组不可点" disabled>
+          <option>张三</option>
+          <option>李四</option>
+          <option>王五</option>
+        </optgroup>
+        <optgroup label="后端" data-max-options="2">
+          <option>孙悟空</option>
+          <option disabled>此项不可点</option>
+          <option>沙悟净</option>
+        </optgroup>
+      </select>
+    </div>
+
+
+    
+    
+
+
+
+  </div>
+  
+
+  <script>
+    $(function() {
+      $('.selectpicker').selectpicker();
+      
+      $(".selectpickerText").selectpicker({
+        maxOptionsText: '最多只能选择三个'
+      })
+
+      $(".selectpickerOne").selectpicker({
+        // multipleSeparator: ';',
+        // maxOptions: 1,
+        maxOptionsText: '每组只能选择2个'
+      })
+
+      $(".selectpickerTwo").selectpicker({
+        countSelectedText: "{1}个中选中了{0}个"
+      })
+
+      $(".selectpickerThree").selectpicker({
+        // countSelectedText: "{1}个中选中了{0}个"
+        showSubtext: true
+      })
+
+      
+    })
+  </script>
+  
+</body>
+</html>
