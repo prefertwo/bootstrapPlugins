@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <link rel="stylesheet" href="../public/bootstrap-3.4.1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./dist/bootstrap-table.min.css">
+  
+</head>
+<body>
+  <div class="wrap">
+    <table id="basic_table" ></table>
+    <!-- <table id="basic_table" data-custom-sort="customSort" ></table> -->
+    
+  </div>
+
+  <script src="../public/jquery-3.4.1.js"></script>
+  <!-- <script src="../public/bootstrap-3.4.1-dist/js/"></script> -->
+  <script src="../public/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+  <script src="./dist/bootstrap-table-1.16.0.min.js"></script>
+
+  <script>
+    // 初始化数据
+    let dataT = [];
+    for(let i=0;i<30;i++) {
+      let obj = {
+        id: i,
+        name: `Jerry--${i}`,
+        code: i+123
+      }
+      dataT.push(obj);
+    }
+
+    // 自定义排序方法，排序名称，排序方法（升序/降序），数据列表
+    function customSort(sortName, sortOrder, data) {
+      console.log(sortName, sortOrder, data);
+      
+      data.sort(function(a,b) {
+        let aa = a[sortName].toString().replace(/[^\d]/g, ''); // 非数字替换成空字符串
+        let bb = b[sortName].toString().replace(/[^\d]/g, '');
+        if(sortOrder == 'desc') {
+          return aa-bb;
+        } else {
+          return bb-aa;
+        }
+      })
+    }
+    // bootstrapTable
+    // $("#basic_table").bootstrapTable("refreshOptions", {data: dataT})
+    $("#basic_table").bootstrapTable({
+      data: dataT,
+      customSort: customSort,
+      columns: [
+        {
+          field: 'id',
+          title: 'ID'
+        },
+        {
+          field: 'name',
+          title: '姓名',
+          sortable: true,
+        },
+        {
+          field: 'code',
+          title: '编号'
+        }
+      ]
+    });
+
+    
+
+  </script>
+  
+
+</body>
+</html>

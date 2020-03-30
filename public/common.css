@@ -1,0 +1,8 @@
+.box {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.section {
+  margin: 20px;
+}

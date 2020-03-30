@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href="https://cdn.bootcss.com/select2/4.0.12/css/select2.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../public/common.css">
+
+  <script src="../public/jquery-3.4.1.js"></script>
+  <script src="https://cdn.bootcss.com/select2/4.0.11/js/select2.min.js"></script>
+
+  <style>
+    select {
+      min-width: 200px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="box">
+    <div class="section">
+      <h3>基本应用</h3>
+      <select class="example_basic" name="state" style="width: 200px;">
+        <option value="AL">唐三藏</option>
+        <option value="WK">孙悟空</option>
+        <option value="WN">猪悟能</option>
+        <option value="WJ">沙悟净</option>
+        <option value="BL">小白龙</option>
+      </select>
+    </div>
+
+    <div class="section">
+      <h3>多选</h3>
+      <select class="example_basic" multiple >
+        <option>张三</option>
+        <option>李四</option>
+        <option>王五</option>
+        <option>孙悟空</option>
+        <option disabled>此项不可点</option>
+        <option>沙悟净</option>
+      </select>
+    </div>
+    
+    
+    
+  </div>
+  
+
+  <script>
+    $(document).ready(function() {
+
+      $('.example_basic').select2({
+        placeholder: '请选择'
+      });
+
+      
+    });
+  </script>
+  
+</body>
+</html>
